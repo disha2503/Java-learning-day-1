@@ -1,0 +1,103 @@
+Questions asked in Samsung, TCS
+
+
+
+
+Problem statement
+Data type refers to the type of value a variable has and the way the computer interprets it.
+
+
+
+Each data type has a different size. You’ve studied 5 different data types and the sizes of the data types:
+
+Integer: 4 bytes
+Long: 8 bytes
+Float: 4 bytes
+Double: 8 bytes
+Character: 1 byte
+
+
+You’re given a data type. Print its size in bytes.
+
+
+
+Example :
+Input: Long
+
+Output: 8
+
+Explanation: The size of a Long variable is given as 8 bytes.
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+Long
+
+
+Sample Output 1:
+8
+
+
+Explanation of sample input 1 :
+The size of a Long variable is given as 8 bytes.
+
+
+
+
+
+Solution
+
+  
+
+import java.util.Scanner;
+
+public class dataytpe {
+    public static void main(String[] args) {
+        // Create a Scanner object to take user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter a data type
+        System.out.print("Enter a data type (Integer, Long, Float, Double, Character): ");
+        String dataType = scanner.nextLine();
+
+        // Close the scanner to prevent resource leaks
+        scanner.close();
+
+        // Determine and print the size of the specified data type
+        switch (dataType.toLowerCase()) {
+            case "integer":
+                System.out.println("Size of Integer: 4 bytes");
+                break;
+            case "long":
+                System.out.println("Size of Long: 8 bytes");
+                break;
+            case "float":
+                System.out.println("Size of Float: 4 bytes");
+                break;
+            case "double":
+                System.out.println("Size of Double: 8 bytes");
+                break;
+            case "character":
+                System.out.println("Size of Character: 1 byte");
+                break;
+            default:
+                System.out.println("Invalid data type");
+        }
+    }
+}
+
+Time Complexity
+O(1), that is constant time.
+
+The time is proportional to the number of data types and the length of their names(for string comparison).
+
+Since the data types are fixed, we can consider it as constant time.
+
+Hence the time complexity is O(1).
+
+Space Complexity
+O(1), that is constant space.
+
+We are not creating any variable thus not using any auxiliary space.
+
+Hence the space complexity is O(1).
+
+  
